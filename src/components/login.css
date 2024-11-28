@@ -13,7 +13,7 @@
     width: 100%;
   }
 
-  h2 {
+  .container h2 {
     text-align: center;
     margin-bottom: 30px;
   }
@@ -71,7 +71,7 @@
   p{
     margin: 12px;
   }
-  span{
+  p span{
     color: #1677FF;
     cursor: pointer;
   }

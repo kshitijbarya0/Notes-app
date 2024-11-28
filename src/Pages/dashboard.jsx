@@ -105,7 +105,7 @@ function Dashboard() {
                 </div>
                 <div className="navUserProfile">
                     <Space direction="vertical" size={0}>
-                        <Space size={5}>
+                        <Space wrap size={2}>
                             <p>{currUser.name}</p>
                             <Avatar size={30} icon={<UserOutlined />} />
                         </Space>

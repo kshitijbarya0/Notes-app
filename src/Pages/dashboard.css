@@ -3,19 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .dashboard-container {
     height: 100%;
     width: 100%;
-    /* display: flex; */
-    /* flex-direction: column; */
+    /* display: flex; / / flex-direction: column; */
 }
 
-/* Fixed navigation bar styles */
 .nav_bar {
-    position: fixed; /* Fixed position */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -34,12 +33,14 @@
 .navUserProfile {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
+
 .navUserProfile p {
+    margin: auto;
     color: white;
     font-size: 0.875rem;
-    margin: 0;
+    margin-right: 0.5rem;
 }
 
 /* Button styles */
@@ -58,13 +59,12 @@ button:hover {
     background-color: #666666;
 }
 
-/* Fixed sidebar with CRUD buttons */
 .CRED_buttons {
-    position: fixed; /* Fixed position */
-    top: 60px; 
+    position: fixed;
+    top: 60px;
     left: 0;
     width: 200px;
-    height: calc(100vh - 60px); 
+    height: calc(100vh - 60px);
     background-color: #441b1b;
     padding: 1rem;
     display: flex;
@@ -84,25 +84,29 @@ button:hover {
 .CRED_buttons button:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
-.Notes_section{
+
+.Notes_section {
     width: 87%;
     margin-top: 60px;
     margin-left: 13%;
     padding: 20px;
 }
-.Create_button{
+
+.Create_button {
     width: 11%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.List_notes{
+
+.List_notes {
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap:20px;
+    gap: 20px,
 }
-.card{
+
+.card {
     background-color: white;
     padding: 10px;
     margin: 5px;
@@ -110,6 +114,7 @@ button:hover {
     text-align: center;
     height: 30vh;
 }
+
 .card-image {
     width: 100%;
     height: 250px;

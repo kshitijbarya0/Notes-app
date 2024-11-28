@@ -20,7 +20,7 @@
     width: 100%;
 }
 
-h2 {
+.container h2 {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -53,7 +53,7 @@ input {
 .terms-checkbox label {
     margin-left: 5px;
 }
-button{
+.btn button{
     display: block;
     width: 95%;
     padding: 12px;
