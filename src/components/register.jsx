@@ -23,6 +23,9 @@ const RegisterUser = ({ setIsloggedIn }) => {
             console.log("Failed");
         }
     };
+    const changetologin = () =>{
+        Navigate('/login');
+    }
 
     return (
         <div className="main-container">
@@ -58,6 +61,10 @@ const RegisterUser = ({ setIsloggedIn }) => {
                     </div>
                     <div className="btn">
                         <button onClick={handleChange}>Create</button>
+                    </div>
+                    <div className="pathtologin">
+                    <p>Already have account?</p>
+                    <button onClick={changetologin}>Login</button>
                     </div>
             </div>
         </div>
