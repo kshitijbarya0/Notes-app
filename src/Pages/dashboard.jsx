@@ -147,7 +147,6 @@ function Dashboard() {
             >
                 <h2>{noteTitle}</h2>
                 <p>{noteDescription}</p>
-                <small>Created On: {selectedNote?.date}</small>
             </Modal>
 
             <Modal

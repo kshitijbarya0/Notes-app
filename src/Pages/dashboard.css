@@ -151,3 +151,142 @@ button:hover {
 .card-button:hover {
     background-color: #0056b3;
 }
+
+
+@media (max-width: 768px) {
+    .nav_bar {
+        flex-direction: column;
+        padding: 0.5rem;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .nav_logo h3 {
+        font-size: 1.25rem;
+    }
+
+    .navUserProfile {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .CRED_buttons {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 0.rem;
+        margin-top: 30px;
+    }
+
+    .CRED_buttons button {
+        flex-shrink: 0;
+        width: auto;
+    }
+
+    .Notes_section {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .List_notes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .card {
+        height: auto;
+        padding: 15px;
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .Create_button {
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+     
+    .nav_bar {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 0.5rem; 
+        height: auto; 
+    }
+
+    .nav_logo h3 {
+        font-size: 1.25rem; 
+    }
+
+    .navUserProfile {
+        display: flex; 
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .navUserProfile p {
+        font-size: 0.75rem; 
+        margin: 0; 
+    }
+    
+
+    .List_notes {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .card-image {
+        height: 100px;
+    }
+
+    .Create_button {
+        margin-top: 110px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px;
+        align-items: start;
+    }
+}
+
+@media (max-width: 1024px) {
+    .List_notes {
+        grid-template-columns: repeat(2, 0.3fr);
+        gap:8px;
+    }
+    .Create_button {
+        gap: 10px;
+        margin-left: 70px;
+    }
+    .List_notes {
+       margin-left: 150px;
+    }
+    
+    .Notes_section {
+        padding: 10px;
+    }
+    .card {
+        background-color: white;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 12px;
+        text-align: center;
+        height: auto;
+        width: 19rem;
+    }
+}
