@@ -98,12 +98,10 @@ function Dashboard() {
         setNoteDescription('');
     };
     return (
-        <div className="dashboard-container">
-            <div className="nav_bar">
-                <div className="nav_logo">
-                    <h3>Logo</h3>
-                </div>
-                <div className="navUserProfile">
+        <div className='Main_dashboard'>
+            <div className="nav">
+                <h1>Logo</h1>
+                <div className='nav-profile'>
                     <Space direction="vertical" size={0}>
                         <Space wrap size={2}>
                             <p>{currUser.name}</p>
@@ -113,31 +111,42 @@ function Dashboard() {
                     <button onClick={handleLogout}>Logout</button>
                 </div>
             </div>
-            <div className="CRED_buttons">
-                <button>Add notes</button>
-                <button>Add notes</button>
-                <button>Add notes</button>
-            </div>
-            <div className='Notes_section'>
-                <div className='Create_button'>
-                    <h3>Create Notes</h3>
-                    <PlusCircleFilled onClick={() => setIsModalVisible(true)} />
+
+            <div className="dashborad_area">
+
+                <div className="first_side">
+                    <div className="first_btn">
+                        <button>Add notes</button>
+                        <button>Add notes</button>
+                        <button>Add notes</button>
+                    </div>
                 </div>
-                <div className='List_notes'>
-                    {notes.map((note, index) => (
-                        <div className="card" key={index}>
-                            <div className="card-content">
-                                <h2 className="card-title">{note.title.slice(0, 20)}...</h2>
-                                <p className="card-description">{note.description.slice(0, 50)}...</p>
-                                <button onClick={() => showModal('view', note)} > <EyeOutlined />View</button>
-                                <button onClick={() => openModal('edit', note)} > <EditOutlined />Edit</button>
-                                <button onClick={() => handleDeleteNote(note)} > <DeleteOutlined />Delete</button>
-                                <small>{note.date}</small>
+
+                <div className="second_side">
+
+                    <div className="create-btn">
+                        <h3>Create Notes</h3>
+                        <PlusCircleFilled onClick={() => setIsModalVisible(true)} />
+                    </div>
+
+                    <div className="notes_list">
+                        {notes.map((note, index) => (
+                            <div className="card" key={index}>
+                                <h2 className='card_title'>{note.title.slice(0, 20)}...</h2>
+                                <p className='card_desc'>{note.description.slice(0, 50)}...</p>
+                                <div className="note_btn">
+                                    <button onClick={() => showModal('view', note)} > <EyeOutlined />View</button>
+                                    <button onClick={() => openModal('edit', note)} > <EditOutlined />Edit</button>
+                                    <button onClick={() => handleDeleteNote(note)} > <DeleteOutlined />Delete</button>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
+
             </div>
+
+
             <Modal
                 title="View Note"
                 open={isModalOpen}

@@ -23,7 +23,7 @@ const RegisterUser = ({ setIsloggedIn }) => {
             console.log("Failed");
         }
     };
-    const changetologin = () =>{
+    const changetologin = () => {
         Navigate('/login');
     }
 
@@ -32,40 +32,40 @@ const RegisterUser = ({ setIsloggedIn }) => {
 
             <div className="container">
                 <h2>Create an account</h2>
-                    <div className="form-group">
-                        <label>First name</label>
-                        <input
-                            type="name"
-                            placeholder="Enter your first name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Email</label>
-                        <input
-                            type="email"
-                            placeholder="Enter email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Set password</label>
-                        <input
-                            type="password"
-                            placeholder="Enter password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </div>
-                    <div className="btn">
-                        <button onClick={handleChange}>Create</button>
-                    </div>
-                    <div className="pathtologin">
-                    <p>Already have account?</p>
+                <div className="form-group">
+                    <label>First name</label>
+                    <input
+                        type="name"
+                        placeholder="Enter your first name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        placeholder="Enter email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Set password</label>
+                    <input
+                        type="password"
+                        placeholder="Enter password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
+                <div className="btn">
+                    <button onClick={handleChange}>Create</button>
+                </div>
+                <div className="pathtologin">
+                    <div><p>Already have account?</p></div>
                     <button onClick={changetologin}>Login</button>
-                    </div>
+                </div>
             </div>
         </div>
     );

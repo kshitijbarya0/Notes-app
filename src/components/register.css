@@ -9,10 +9,12 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
 }
 
 .container {
-    background-color: #2c2c2c;
+    border: 1px solid rgb(126, 118, 118);
+    background-color: #ffffff;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -38,37 +40,46 @@ label {
 input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #3d3d3d;
+    border: 1px solid #a8a6a6;
     border-radius: 4px;
-    background-color: #3d3d3d;
-    color: #f4f4f4;
+    background-color: #f0efef;
+    color: #3f3e3e;
 }
 
-.btn button{
-    display: block;
-    width: 95%;
+.pathtologin{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    align-items: center;
+    gap: 12px;
+}
+.pathtologin button{
+    border: none;
     padding: 12px;
-    background-color: #6200ee;
-    color: #f4f4f4;
-    border: none;
-    border-radius: 4px;
+    border-radius: 15px;
+    transition: 0.8s ease;
     cursor: pointer;
-    font-size: 16px;
 }
-
-.btn {
-    display: block;
+.pathtologin button:hover{
+    background-color: #a8a6a6;
+}
+.btn{
+    display: flex;
+    position: relative;
     width: 100%;
-    padding: 1px;
-    background-color: #6200ee;
-    color: #f4f4f4;
+}
+.btn button{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    margin-top: 3%;
+    font-size: 18px;
+    transition: 0.8s ease;
     cursor: pointer;
-    font-size: 16px;
 }
-
-.btn:hover {
-    background-color: #4b00c4;
+.btn button:hover{
+    background-color: #a8a6a6;
 }
-

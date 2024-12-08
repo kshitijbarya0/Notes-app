@@ -1,292 +1,240 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.dashboard-container {
+.Main_dashboard {
     height: 100%;
     width: 100%;
-    /* display: flex; / / flex-direction: column; */
+    position: relative;
 }
 
-.nav_bar {
+.nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 1rem;
+    z-index: 1000;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(53, 53, 52);
-    color: white;
-    height: 60px;
-    z-index: 1000;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 0 5vw;
 }
 
-.nav_logo h3 {
-    color: white;
-    font-size: 1.5rem;
-}
-
-.navUserProfile {
+.nav-profile {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    gap: 12px;
 }
 
-.navUserProfile p {
-    margin: auto;
-    color: white;
-    font-size: 0.875rem;
-    margin-right: 0.5rem;
-}
-
-/* Button styles */
-button {
-    padding: 0.5rem 1rem;
-    margin: 0.25rem;
+.nav-profile button {
+    padding: 0 2vh;
+    font-size: 15px;
+    font-weight: 600;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #4a4a4a;
+    border-radius: 12px;
+    background-color: brown;
     color: white;
-    transition: background-color 0.2s;
+    cursor: pointer;
 }
 
-button:hover {
-    background-color: #666666;
+.dashborad_area {
+    height: calc(100vh - 80px);
+    width: 100%;
+    display: flex;
+    position: relative;
 }
 
-.CRED_buttons {
+.first_side {
     position: fixed;
-    top: 60px;
+    top: 80px;
     left: 0;
-    width: 200px;
-    height: calc(100vh - 60px);
-    background-color: #441b1b;
-    padding: 1rem;
+    height: calc(100vh - 80px);
+    width: 15%;
+    background-color: burlywood;
+    padding: 2vw 3vw;
+    z-index: 100;
+}
+
+.first_btn {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    z-index: 999;
-}
-
-.CRED_buttons button {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    text-align: center;
-    padding: 0.75rem 1rem;
-}
-
-.CRED_buttons button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.Notes_section {
-    width: 87%;
-    margin-top: 60px;
-    margin-left: 13%;
-    padding: 20px;
-}
-
-.Create_button {
-    width: 11%;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
-.List_notes {
-    margin-top: 20px;
+.first_btn button {
+    margin: 5px;
+    padding: 0.5vw 2vw;
+    border: none;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.second_side {
+    margin-left: 15%;
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+    width: calc(100% - 15%);
+    /* background-color: wheat; */
+    padding: 2vw 3vw;
+}
+
+.create-btn {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.notes_list {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px,
+    gap: 16px;
+    padding: 20px;
 }
 
 .card {
-    background-color: white;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 12px;
-    text-align: center;
-    height: 30vh;
-}
-
-.card-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    background-color: rgb(67, 57, 58);
+    text-align: center;
+    padding: 3vw;
+    border-radius: 12px;
 }
 
-.card-content {
-    padding: 20px;
-}
-
-.card-title {
-    margin: 0 0 10px 0;
-    color: #333;
+.card_title {
+    width: 100%;
     font-size: 1.25rem;
+    color: aliceblue;
+    font-weight: 200;
+    text-align: center;
 }
 
-.card-description {
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 15px;
+.card_desc {
+    width: 100%;
+    font-size: 1vw;
+    color: rgb(201, 201, 194);
+    font-weight: 100;
+    text-align: center;
 }
 
-.card-button {
-    display: inline-block;
-    background-color: #31363f;
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
+.card button {
+    display: inline;
+    margin: 0.2vw;
+    padding: 0.4vw 0.4vw;
     border-radius: 5px;
-    margin: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.card-button:hover {
-    background-color: #0056b3;
-}
-
-
-@media (max-width: 768px) {
-    .nav_bar {
-        flex-direction: column;
-        padding: 0.5rem;
-        height: auto;
-        align-items: flex-start;
-    }
-
-    .nav_logo h3 {
-        font-size: 1.25rem;
-    }
-
-    .navUserProfile {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: flex-start;
-    }
-
-    .CRED_buttons {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        overflow-x: auto;
-        padding: 0.rem;
-        margin-top: 30px;
-    }
-
-    .CRED_buttons button {
-        flex-shrink: 0;
-        width: auto;
-    }
-
-    .Notes_section {
-        width: 100%;
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .List_notes {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .card {
-        height: auto;
-        padding: 15px;
-    }
-
-    .card-image {
-        height: 150px;
-    }
-
-    .card-title {
-        font-size: 1rem;
-    }
-
-    .Create_button {
-        width: 100%;
-        justify-content: space-around;
-        margin-bottom: 10px;
-    }
+    border: none;
+    margin-top: 1vw;
+    text-align: center;
+    align-items: center;
 }
 
 @media (max-width: 480px) {
-     
-    .nav_bar {
-        flex-direction: row; 
-        justify-content: space-between; 
-        align-items: center; 
-        padding: 0.5rem; 
-        height: auto; 
+    .nav h1 {
+        font-size: 25px;
     }
 
-    .nav_logo h3 {
-        font-size: 1.25rem; 
+    .nav-profile button {
+        font-size: 12px;
+        padding: 0.5vw 2vw;
     }
 
-    .navUserProfile {
-        display: flex; 
+    .notes_list {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .first_side {
+        position: fixed;
+        top: 80px;
+        height: 50px;
+        width: 100%;
+        background-color: rgb(67, 57, 58);
+        padding: 2vw 3vw;
+        z-index: 100;
+    }
+    .first_btn {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
         align-items: center;
-        gap: 0.5rem;
-    }
-
-    .navUserProfile p {
-        font-size: 0.75rem; 
-        margin: 0; 
     }
     
+    .first_btn button {
+        margin: 5px;
+        padding: 0.8vw 3vw;
+        border: none;
+        font-size: 15px;
+        align-items: center;
+        text-align: center;
+        border-radius: 8px;
+    }
 
-    .List_notes {
-        grid-template-columns: 1fr;
+    .second_side {
+        margin-left: 0%;
+        margin-top: 130px;
+        height: calc(100vh - 80px);
+        width: 100%;
+        /* background-color: wheat; */
+        padding: 2vw 3vw;
     }
 
     .card {
-        height: auto;
-        margin: 10px 0;
+        height: 25vh;
+        width: 100%;
+        background-color: rgb(67, 57, 58);
+        text-align: center;
+        padding: 5vw;
+        border-radius: 12px;
     }
 
-    .card-image {
-        height: 100px;
+    .card button {
+        margin: 3px;
+        padding: 6px;
     }
 
-    .Create_button {
-        margin-top: 110px;
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px;
-        align-items: start;
+    .card_desc {
+        font-size: 3vw;
+    }
+
+    .card_title {
+        font-size: 4vw;
     }
 }
 
-@media (max-width: 1024px) {
-    .List_notes {
-        grid-template-columns: repeat(2, 0.3fr);
-        gap:8px;
+@media (min-width: 481px) and (max-width: 769px) {
+    .notes_list {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 20px;
     }
-    .Create_button {
-        gap: 10px;
-        margin-left: 70px;
+    .first_side{
+        width: 20%;
     }
-    .List_notes {
-       margin-left: 150px;
+    .second_side{
+        margin-left: 20%;
     }
-    
-    .Notes_section {
-        padding: 10px;
+}
+
+@media (min-width: 1023px) and (max-width: 1441px) {
+    .notes_list {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 20px;
     }
-    .card {
-        background-color: white;
-        padding: 10px;
-        margin: 5px;
-        border-radius: 12px;
-        text-align: center;
-        height: auto;
-        width: 19rem;
+    .first_side{
+        width: 20%;
+    }
+    .second_side{
+        margin-left: 20%;
     }
 }
